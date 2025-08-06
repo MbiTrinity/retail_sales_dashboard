@@ -81,4 +81,10 @@ def update_charts(selected_region, selected_product, start_date, end_date):
 
 # Run the app
 if __name__ == '__main__':
-    app.run(debug=True)
+    import os
+
+if __name__ == '__main__':
+    port = int(os.environ.get('PORT', 8050))
+    app.run_server(debug=True, host='0.0.0.0', port=port)
+
+
